@@ -2,11 +2,21 @@
 
 ## 実行
 
-```
-npm run start-dev
-npm run ios-dev
+
+[m1 macのxcode設定](https://qiita.com/peka2/items/73ee82fe3555217ff712)
 
 ```
+#npm run start-dev
+#npm run ios-dev
+
+npm run start:ios
+```
+
+#npm run start-web
+# ビルドして実行
+npm run build-web
+cd build
+php -S localhost:8000
 
 
 ## 初期設定の時のメモ
@@ -16,8 +26,15 @@ npm run ios-dev
 
 npm install typescript @types/react @types/react-native --save-dev
 cd ./app/ios
+
+
+#m1 macの場合
 arch -x86_64 pod install
 arch -x86_64 pod install --repo-update
+or
+pod install
+pod install --repo-update
+
 npm run start
 ```
 
